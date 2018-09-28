@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="primary">
+            <ion-button text-capitalize (click)="sair()">Sair</ion-button>
+        </ion-buttons>
+        <ion-title>Lista de Professores</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list lines="full" *ngFor="let article of data" [hidden]="!article.author">
+        <ion-item  *ngIf="article.author && article.urlToImage" (click)="onClickPessoa(article.publishedAt)">
+          <ion-label >
+            <h2>{{ (article.author).split(" ").slice(1).join(" ") }}, <b>{{ (article.author).split(" ")[0] }}</b> </h2>
+          </ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>

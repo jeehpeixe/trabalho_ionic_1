@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" text="Voltar">
+      <ion-back-button defaultHref="turma"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalhes do Professor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-item>
+          <ion-avatar item-start>
+              <ion-img [src]="urlImagem"></ion-img>
+          </ion-avatar>
+          <ion-label style="text-align:center;">
+              <b>{{nome}}</b>
+          </ion-label>
+        </ion-item>
+        <ion-card-content>
+          <p>{{curriculo}}</p>
+        </ion-card-content>
+      </ion-card>
+</ion-content>
